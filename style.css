@@ -1,9 +1,10 @@
-/* ==========================================
-   Happy Girlfriend Day Premium
-   Part 1
-   Reset • Theme • Aurora • Stars • Hearts
-   Loading • Glass Card
-========================================== */
+/* ===================================================
+   HAPPY GIRLFRIEND DAY
+   STYLE.CSS
+   PART 1
+=================================================== */
+
+/* ===== RESET ===== */
 
 *{
     margin:0;
@@ -17,87 +18,161 @@ html{
 
 body{
     font-family:'Poppins',sans-serif;
+    background:#ffd7e8;
+    color:#ffffff;
     overflow-x:hidden;
-    background:#ffb7d5;
-    color:#fff;
     min-height:100vh;
     position:relative;
 }
 
-/* Scrollbar */
+/* ===== VARIABLES ===== */
+
+:root{
+
+    --primary:#ff4d8d;
+    --secondary:#ff82b4;
+    --accent:#ffb6d4;
+
+    --glass:rgba(255,255,255,.18);
+    --glassBorder:rgba(255,255,255,.35);
+
+    --shadow:0 20px 50px rgba(0,0,0,.18);
+
+    --radius:28px;
+
+}
+
+/* ===== SCROLLBAR ===== */
 
 ::-webkit-scrollbar{
+
     width:10px;
+
 }
 
 ::-webkit-scrollbar-track{
-    background:#ffd6e7;
+
+    background:#ffdbe9;
+
 }
 
 ::-webkit-scrollbar-thumb{
-    background:#ff4f91;
+
+    background:linear-gradient(
+        var(--primary),
+        var(--secondary)
+    );
+
     border-radius:20px;
+
 }
 
-::-webkit-scrollbar-thumb:hover{
-    background:#ff2f7a;
-}
-
-/* Hide */
+/* ===== HIDDEN ===== */
 
 .hidden{
+
     display:none !important;
+
 }
 
-/* ==========================================
-   Aurora Background
-========================================== */
+/* ===================================================
+   BACKGROUND
+=================================================== */
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    background:
+
+    radial-gradient(circle at top left,
+    rgba(255,255,255,.35),
+    transparent 40%),
+
+    radial-gradient(circle at bottom right,
+    rgba(255,255,255,.2),
+    transparent 35%);
+
+    z-index:-5;
+
+}
+
+/* ===================================================
+   AURORA
+=================================================== */
 
 .aurora{
+
     position:fixed;
+
     inset:0;
+
     overflow:hidden;
-    z-index:-3;
-    background:linear-gradient(
-        180deg,
-        #ffb7d5 0%,
-        #ffc8dd 40%,
-        #ffe5ec 100%
-    );
+
+    z-index:-4;
+
 }
 
 .aurora span{
+
     position:absolute;
+
     border-radius:50%;
+
     filter:blur(120px);
-    opacity:.7;
+
     animation:auroraMove 18s ease-in-out infinite alternate;
+
 }
 
 .aurora span:nth-child(1){
-    width:420px;
-    height:420px;
-    background:#ff5d8f;
-    top:-100px;
-    left:-100px;
+
+    width:520px;
+
+    height:520px;
+
+    background:#ff6ea8;
+
+    left:-120px;
+
+    top:-120px;
+
 }
 
 .aurora span:nth-child(2){
-    width:500px;
-    height:500px;
-    background:#ff8fab;
-    bottom:-150px;
-    right:-120px;
+
+    width:480px;
+
+    height:480px;
+
+    background:#ff9bc5;
+
+    right:-100px;
+
+    bottom:-100px;
+
     animation-duration:22s;
+
 }
 
 .aurora span:nth-child(3){
+
     width:350px;
+
     height:350px;
-    background:#ffd6e7;
-    top:35%;
-    left:35%;
-    animation-duration:25s;
+
+    background:#ffd8e8;
+
+    left:40%;
+
+    top:25%;
+
+    animation-duration:26s;
+
 }
 
 @keyframes auroraMove{
@@ -114,34 +189,39 @@ body{
 
         transform:
         translate(120px,-80px)
-        scale(1.35);
+        scale(1.25);
 
     }
 
 }
 
-/* ==========================================
-   Stars
-========================================== */
+/* ===================================================
+   STARS
+=================================================== */
 
 #stars{
+
     position:fixed;
+
     inset:0;
-    z-index:-2;
+
     pointer-events:none;
+
+    z-index:-3;
+
 }
 
 .star{
 
     position:absolute;
 
-    width:2px;
+    width:3px;
 
-    height:2px;
-
-    background:white;
+    height:3px;
 
     border-radius:50%;
+
+    background:#fff;
 
     animation:twinkle 3s infinite;
 
@@ -152,13 +232,15 @@ body{
     0%{
 
         opacity:.2;
-        transform:scale(.8);
+
+        transform:scale(.7);
 
     }
 
     50%{
 
         opacity:1;
+
         transform:scale(1.8);
 
     }
@@ -166,15 +248,16 @@ body{
     100%{
 
         opacity:.2;
-        transform:scale(.8);
+
+        transform:scale(.7);
 
     }
 
 }
 
-/* ==========================================
-   Floating Hearts
-========================================== */
+/* ===================================================
+   FLOATING HEART
+=================================================== */
 
 #hearts{
 
@@ -186,7 +269,7 @@ body{
 
     pointer-events:none;
 
-    z-index:-1;
+    z-index:-2;
 
 }
 
@@ -196,27 +279,25 @@ body{
 
     bottom:-40px;
 
-    font-size:20px;
+    font-size:22px;
 
-    opacity:.7;
-
-    animation:floatHeart linear forwards;
+    animation:heartFloat linear forwards;
 
 }
 
-@keyframes floatHeart{
+@keyframes heartFloat{
 
     from{
 
         transform:
         translateY(0)
-        rotate(0deg);
+        rotate(0);
 
         opacity:0;
 
     }
 
-    10%{
+    15%{
 
         opacity:1;
 
@@ -234,11 +315,76 @@ body{
 
 }
 
-/* ==========================================
-   Loading Screen
-========================================== */
+/* ===================================================
+   SAKURA
+=================================================== */
 
-#loading-screen{
+#petals{
+
+    position:fixed;
+
+    inset:0;
+
+    overflow:hidden;
+
+    pointer-events:none;
+
+    z-index:-1;
+
+}
+
+.petal{
+
+    position:absolute;
+
+    width:12px;
+
+    height:12px;
+
+    background:#ffe8f2;
+
+    border-radius:60% 40% 60% 40%;
+
+    animation:petalFall linear forwards;
+
+}
+
+@keyframes petalFall{
+
+    from{
+
+        transform:
+        translateY(-30px)
+        rotate(0deg);
+
+        opacity:0;
+
+    }
+
+    15%{
+
+        opacity:1;
+
+    }
+
+    to{
+
+        transform:
+        translateY(110vh)
+        translateX(120px)
+        rotate(540deg);
+
+        opacity:0;
+
+    }
+
+}
+
+/* ===================================================
+   LOADING
+=================================================== */
+
+#loading{
 
     position:fixed;
 
@@ -247,10 +393,9 @@ body{
     background:
 
     linear-gradient(
-        180deg,
-        #ff5d8f,
-        #ffb7d5
-    );
+    135deg,
+    #ff76aa,
+    #ffbfd7);
 
     display:flex;
 
@@ -258,63 +403,1194 @@ body{
 
     align-items:center;
 
-    flex-direction:column;
-
-    z-index:99999;
+    z-index:9999;
 
 }
 
-.loader-heart{
-
-    font-size:70px;
-
-    animation:heartbeat 1.2s infinite;
-
-}
-
-#loading-screen h1{
-
-    margin-top:20px;
-
-    font-size:40px;
-
-    font-weight:700;
+.loading-content{
 
     text-align:center;
 
+    width:min(420px,90%);
+
 }
 
-#loading-screen p{
+.loading-heart{
+
+    font-size:70px;
+
+    animation:heartbeat 1.3s infinite;
+
+}
+
+.loading-content h1{
+
+    margin-top:20px;
+
+    font-size:38px;
+
+}
+
+.loading-content p{
 
     margin-top:15px;
 
-    opacity:.8;
+    opacity:.85;
+
+}
+
+.loading-bar{
+
+    width:100%;
+
+    height:12px;
+
+    margin-top:35px;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    background:rgba(255,255,255,.3);
+
+}
+
+.loading-progress{
+
+    width:0%;
+
+    height:100%;
+
+    border-radius:20px;
+
+    background:white;
 
 }
 
 @keyframes heartbeat{
 
+    0%{transform:scale(1);}
+    20%{transform:scale(1.2);}
+    40%{transform:scale(.95);}
+    60%{transform:scale(1.3);}
+    100%{transform:scale(1);}
+
+}
+/* ===================================================
+   STYLE.CSS
+   PART 2
+   Glass Card • Welcome • Story • Button • Music
+===================================================*/
+
+/* =========================
+   MAIN
+========================= */
+
+#app{
+
+    width:100%;
+    min-height:100vh;
+
+}
+
+/* =========================
+   SECTION
+========================= */
+
+section{
+
+    width:100%;
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:
+
+    80px 20px;
+
+}
+
+/* =========================
+   GLASS CARD
+========================= */
+
+.glass-card{
+
+    width:min(950px,95%);
+
+    background:rgba(255,255,255,.15);
+
+    border:1px solid rgba(255,255,255,.28);
+
+    backdrop-filter:blur(25px);
+
+    -webkit-backdrop-filter:blur(25px);
+
+    border-radius:32px;
+
+    padding:45px;
+
+    box-shadow:
+
+    0 20px 60px rgba(0,0,0,.18);
+
+    transition:.45s;
+
+}
+
+.glass-card:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:
+
+    0 30px 80px rgba(0,0,0,.25);
+
+}
+
+/* =========================
+   TYPOGRAPHY
+========================= */
+
+h1{
+
+    font-size:56px;
+
+    font-weight:700;
+
+    color:#fff;
+
+    line-height:1.15;
+
+}
+
+h2{
+
+    font-size:40px;
+
+    color:#fff;
+
+    margin-bottom:15px;
+
+}
+
+h3{
+
+    font-size:24px;
+
+    font-weight:500;
+
+    opacity:.9;
+
+}
+
+p{
+
+    font-size:18px;
+
+    line-height:1.9;
+
+    color:#fff;
+
+}
+
+/* =========================
+   WELCOME
+========================= */
+
+#welcome{
+
+    text-align:center;
+
+}
+
+.welcome-card{
+
+    animation:fadeUp .9s ease;
+
+}
+
+.welcome-badge{
+
+    display:inline-block;
+
+    padding:
+
+    10px 22px;
+
+    border-radius:40px;
+
+    background:
+
+    rgba(255,255,255,.2);
+
+    margin-bottom:25px;
+
+    font-weight:600;
+
+    backdrop-filter:blur(15px);
+
+}
+
+.welcome-card h1{
+
+    margin:
+
+    15px 0;
+
+    color:white;
+
+}
+
+.welcome-card p{
+
+    width:min(650px,100%);
+
+    margin:
+
+    25px auto;
+
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+button{
+
+    border:none;
+
+    outline:none;
+
+    cursor:pointer;
+
+    padding:
+
+    16px 35px;
+
+    border-radius:50px;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    color:white;
+
+    background:
+
+    linear-gradient(
+    135deg,
+    #ff4d8d,
+    #ff84b8);
+
+    transition:.35s;
+
+    box-shadow:
+
+    0 12px 30px rgba(255,77,141,.35);
+
+}
+
+button:hover{
+
+    transform:
+
+    translateY(-4px)
+    scale(1.03);
+
+    box-shadow:
+
+    0 20px 40px rgba(255,77,141,.45);
+
+}
+
+button:active{
+
+    transform:scale(.95);
+
+}
+
+/* =========================
+   FLOAT MUSIC BUTTON
+========================= */
+
+#musicBtn{
+
+    position:fixed;
+
+    right:25px;
+
+    bottom:25px;
+
+    width:65px;
+
+    height:65px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:24px;
+
+    z-index:999;
+
+    backdrop-filter:blur(20px);
+
+    animation:
+
+    musicFloat 3s ease-in-out infinite;
+
+}
+
+@keyframes musicFloat{
+
     0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-10px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* =========================
+   STORY
+========================= */
+
+.story-header{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+
+    margin-bottom:35px;
+
+}
+
+#storyNumber{
+
+    width:70px;
+
+    height:70px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:
+
+    rgba(255,255,255,.18);
+
+    font-size:28px;
+
+    font-weight:700;
+
+}
+
+.story-image{
+
+    width:100%;
+
+    margin:
+
+    30px 0;
+
+    border-radius:24px;
+
+    overflow:hidden;
+
+}
+
+.story-image img{
+
+    width:100%;
+
+    max-height:500px;
+
+    object-fit:cover;
+
+    display:block;
+
+    transition:.6s;
+
+}
+
+.story-image:hover img{
+
+    transform:scale(1.05);
+
+}
+
+.story-text{
+
+    margin-top:25px;
+
+}
+
+#typingText{
+
+    white-space:pre-line;
+
+    line-height:2;
+
+    font-size:18px;
+
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.story-navigation{
+
+    margin-top:45px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+
+.story-navigation button{
+
+    flex:1;
+
+}
+
+/* =========================
+   IMAGE SHADOW
+========================= */
+
+.story-image{
+
+    box-shadow:
+
+    0 20px 50px rgba(0,0,0,.25);
+
+}
+
+/* =========================
+   ANIMATION
+========================= */
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:
+
+        translateY(60px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+
+        translateY(0);
+
+    }
+
+}
+
+.fade-up{
+
+    animation:
+
+    fadeUp .8s ease;
+
+}
+
+/* =========================
+   FADE
+========================= */
+
+.fade{
+
+    animation:
+
+    fade .5s;
+
+}
+
+@keyframes fade{
+
+    from{
+
+        opacity:0;
+
+    }
+
+    to{
+
+        opacity:1;
+
+    }
+
+}
+
+/* =========================
+   GLOW
+========================= */
+
+.glow{
+
+    position:relative;
+
+}
+
+.glow::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:-2px;
+
+    border-radius:inherit;
+
+    background:
+
+    linear-gradient(
+    135deg,
+    rgba(255,255,255,.25),
+    transparent);
+
+    opacity:.4;
+
+    pointer-events:none;
+
+}
+/* ===================================================
+   STYLE.CSS
+   PART 3
+   Gallery • Timeline • Counter • Ending • Lightbox
+===================================================*/
+
+/* =========================
+   SECTION TITLE
+========================= */
+
+.section-title{
+
+    text-align:center;
+
+    margin-bottom:50px;
+
+}
+
+.section-title span{
+
+    display:inline-flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    width:70px;
+
+    height:70px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.18);
+
+    font-size:32px;
+
+    margin-bottom:20px;
+
+    backdrop-filter:blur(15px);
+
+}
+
+.section-title h2{
+
+    margin-bottom:15px;
+
+}
+
+.section-title p{
+
+    max-width:650px;
+
+    margin:auto;
+
+    opacity:.95;
+
+}
+
+/* =========================
+   GALLERY
+========================= */
+
+#gallery{
+
+    flex-direction:column;
+
+}
+
+.gallery-grid{
+
+    width:min(1200px,95%);
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(260px,1fr));
+
+    gap:25px;
+
+}
+
+.gallery-item{
+
+    overflow:hidden;
+
+    border-radius:25px;
+
+    cursor:pointer;
+
+    background:rgba(255,255,255,.15);
+
+    border:1px solid rgba(255,255,255,.25);
+
+    backdrop-filter:blur(15px);
+
+    transition:.4s;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.18);
+
+}
+
+.gallery-item:hover{
+
+    transform:
+    translateY(-8px)
+    scale(1.03);
+
+}
+
+.gallery-item img{
+
+    width:100%;
+
+    height:320px;
+
+    object-fit:cover;
+
+    display:block;
+
+    transition:.6s;
+
+}
+
+.gallery-item:hover img{
+
+    transform:scale(1.08);
+
+}
+
+#galleryNext{
+
+    margin-top:45px;
+
+}
+
+/* =========================
+   TIMELINE
+========================= */
+
+.timeline{
+
+    position:relative;
+
+    margin-top:25px;
+
+    padding-left:35px;
+
+}
+
+.timeline::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:15px;
+
+    top:0;
+
+    bottom:0;
+
+    width:4px;
+
+    border-radius:10px;
+
+    background:rgba(255,255,255,.4);
+
+}
+
+.timeline-item{
+
+    position:relative;
+
+    margin-bottom:45px;
+
+}
+
+.timeline-dot{
+
+    position:absolute;
+
+    left:-28px;
+
+    top:6px;
+
+    width:22px;
+
+    height:22px;
+
+    border-radius:50%;
+
+    background:#fff;
+
+    border:5px solid #ff4d8d;
+
+    box-shadow:0 0 20px rgba(255,77,141,.5);
+
+}
+
+.timeline-content{
+
+    padding:20px 25px;
+
+    background:rgba(255,255,255,.12);
+
+    border-radius:20px;
+
+    border:1px solid rgba(255,255,255,.22);
+
+    backdrop-filter:blur(15px);
+
+}
+
+.timeline-content h3{
+
+    margin-bottom:10px;
+
+}
+
+.timeline-content p{
+
+    font-size:16px;
+
+}
+
+/* =========================
+   LOVE COUNTER
+========================= */
+
+.counter-card{
+
+    text-align:center;
+
+}
+
+.counter-icon{
+
+    display:inline-flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    width:100px;
+
+    height:100px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.18);
+
+    font-size:45px;
+
+    margin-bottom:20px;
+
+}
+
+#loveDays{
+
+    font-size:72px;
+
+    margin:20px 0;
+
+    color:#fff;
+
+}
+
+#loveDate{
+
+    opacity:.9;
+
+    margin-bottom:35px;
+
+}
+
+/* =========================
+   ENDING
+========================= */
+
+.ending-card{
+
+    text-align:center;
+
+}
+
+.ending-heart{
+
+    font-size:85px;
+
+    animation:heartbeat 1.5s infinite;
+
+    margin-bottom:20px;
+
+}
+
+#endingMessage{
+
+    max-width:700px;
+
+    margin:30px auto;
+
+}
+
+/* =========================
+   LIGHTBOX
+========================= */
+
+#lightbox{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.85);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:99999;
+
+    padding:20px;
+
+}
+
+#lightboxImage{
+
+    max-width:90%;
+
+    max-height:90%;
+
+    border-radius:20px;
+
+    box-shadow:0 20px 60px rgba(0,0,0,.5);
+
+    animation:zoomIn .35s ease;
+
+}
+
+#closeLightbox{
+
+    position:absolute;
+
+    top:25px;
+
+    right:35px;
+
+    font-size:45px;
+
+    color:#fff;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+#closeLightbox:hover{
+
+    transform:rotate(90deg);
+
+}
+
+/* =========================
+   CONFETTI
+========================= */
+
+#confettiCanvas{
+
+    position:fixed;
+
+    inset:0;
+
+    width:100%;
+
+    height:100%;
+
+    pointer-events:none;
+
+    z-index:9998;
+
+}
+
+/* =========================
+   ZOOM
+========================= */
+
+@keyframes zoomIn{
+
+    from{
+
+        opacity:0;
+
+        transform:scale(.8);
+
+    }
+
+    to{
+
+        opacity:1;
 
         transform:scale(1);
 
     }
 
-    20%{
+}
 
-        transform:scale(1.25);
+/* =========================
+   FLOAT ANIMATION
+========================= */
+
+.float{
+
+    animation:floatY 3s ease-in-out infinite;
+
+}
+
+@keyframes floatY{
+
+    0%{
+
+        transform:translateY(0);
 
     }
 
-    40%{
+    50%{
 
-        transform:scale(.95);
+        transform:translateY(-12px);
 
     }
 
-    60%{
+    100%{
 
-        transform:scale(1.3);
+        transform:translateY(0);
+
+    }
+
+}
+/* ===================================================
+   STYLE.CSS
+   PART 4
+   Responsive • Utilities • Final Polish
+=================================================== */
+
+/* =========================
+   SPACING UTILITIES
+========================= */
+
+.mt-1{margin-top:10px;}
+.mt-2{margin-top:20px;}
+.mt-3{margin-top:30px;}
+.mt-4{margin-top:40px;}
+.mt-5{margin-top:50px;}
+
+.mb-1{margin-bottom:10px;}
+.mb-2{margin-bottom:20px;}
+.mb-3{margin-bottom:30px;}
+.mb-4{margin-bottom:40px;}
+.mb-5{margin-bottom:50px;}
+
+.text-center{
+    text-align:center;
+}
+
+.w-100{
+    width:100%;
+}
+
+/* =========================
+   SELECTION
+========================= */
+
+::selection{
+
+    background:#ff4d8d;
+
+    color:#fff;
+
+}
+
+/* =========================
+   FOCUS
+========================= */
+
+button:focus{
+
+    outline:none;
+
+}
+
+/* =========================
+   IMAGE
+========================= */
+
+img{
+
+    user-select:none;
+
+    -webkit-user-drag:none;
+
+}
+
+/* =========================
+   LINK
+========================= */
+
+a{
+
+    color:inherit;
+
+    text-decoration:none;
+
+}
+
+/* =========================
+   SMOOTH SHOW
+========================= */
+
+.show{
+
+    animation:showSection .7s ease;
+
+}
+
+@keyframes showSection{
+
+    from{
+
+        opacity:0;
+
+        transform:
+        translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+        translateY(0);
+
+    }
+
+}
+
+/* =========================
+   SCALE IN
+========================= */
+
+.scale-in{
+
+    animation:scaleIn .45s ease;
+
+}
+
+@keyframes scaleIn{
+
+    from{
+
+        opacity:0;
+
+        transform:scale(.9);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:scale(1);
+
+    }
+
+}
+
+/* =========================
+   POP
+========================= */
+
+.pop{
+
+    animation:pop .5s;
+
+}
+
+@keyframes pop{
+
+    0%{
+
+        transform:scale(.7);
+
+    }
+
+    80%{
+
+        transform:scale(1.08);
 
     }
 
@@ -326,187 +1602,337 @@ body{
 
 }
 
-/* ==========================================
-   Main Container
-========================================== */
+/* =========================
+   FADE LEFT
+========================= */
 
-#app{
+.fade-left{
 
-    width:100%;
-
-    min-height:100vh;
-
-    padding:40px 20px;
+    animation:fadeLeft .7s ease;
 
 }
 
-/* ==========================================
-   Section
-========================================== */
+@keyframes fadeLeft{
 
-section{
+    from{
 
-    width:100%;
+        opacity:0;
 
-    min-height:100vh;
+        transform:
+        translateX(-40px);
 
-    display:flex;
+    }
 
-    justify-content:center;
+    to{
 
-    align-items:center;
+        opacity:1;
 
-    flex-direction:column;
+        transform:
+        translateX(0);
 
-}
-
-/* ==========================================
-   Glass Card
-========================================== */
-
-.glass-card{
-
-    width:min(900px,95%);
-
-    padding:45px;
-
-    border-radius:28px;
-
-    background:
-
-    rgba(255,255,255,.15);
-
-    border:
-
-    1px solid rgba(255,255,255,.35);
-
-    backdrop-filter:blur(25px);
-
-    -webkit-backdrop-filter:blur(25px);
-
-    box-shadow:
-
-    0 20px 60px rgba(0,0,0,.15);
-
-    transition:.4s;
+    }
 
 }
 
-.glass-card:hover{
+/* =========================
+   FADE RIGHT
+========================= */
 
-    transform:translateY(-6px);
+.fade-right{
 
-    box-shadow:
-
-    0 30px 80px rgba(0,0,0,.20);
-
-}
-
-/* ==========================================
-   Typography
-========================================== */
-
-h1{
-
-    font-size:52px;
-
-    font-weight:700;
-
-    line-height:1.2;
+    animation:fadeRight .7s ease;
 
 }
 
-h2{
+@keyframes fadeRight{
 
-    font-size:38px;
+    from{
 
-    font-weight:700;
+        opacity:0;
 
-}
+        transform:
+        translateX(40px);
 
-h4{
+    }
 
-    font-size:18px;
+    to{
 
-    color:#fff;
+        opacity:1;
 
-    margin-bottom:15px;
+        transform:
+        translateX(0);
 
-}
-
-p{
-
-    font-size:18px;
-
-    line-height:1.8;
-
-    margin-top:20px;
-
-    color:#fff;
+    }
 
 }
 
-span{
+/* =========================
+   RESPONSIVE
+========================= */
 
-    color:#ff2f7a;
+@media (max-width:1200px){
 
-}
+    .glass-card{
 
-/* ==========================================
-   Buttons
-========================================== */
+        width:95%;
 
-button{
-
-    margin-top:30px;
-
-    border:none;
-
-    cursor:pointer;
-
-    padding:
-
-    16px 36px;
-
-    border-radius:50px;
-
-    background:
-
-    linear-gradient(
-        135deg,
-        #ff4f91,
-        #ff7eb3
-    );
-
-    color:white;
-
-    font-size:17px;
-
-    font-weight:600;
-
-    transition:.35s;
-
-    box-shadow:
-
-    0 10px 25px rgba(255,79,145,.4);
+    }
 
 }
 
-button:hover{
+@media (max-width:992px){
 
-    transform:
+    h1{
 
-    translateY(-4px)
-    scale(1.04);
+        font-size:44px;
 
-    box-shadow:
+    }
 
-    0 20px 40px rgba(255,79,145,.55);
+    h2{
+
+        font-size:34px;
+
+    }
+
+    p{
+
+        font-size:17px;
+
+    }
+
+    .glass-card{
+
+        padding:35px;
+
+    }
+
+    .gallery-grid{
+
+        grid-template-columns:
+        repeat(2,1fr);
+
+    }
 
 }
 
-button:active{
+@media (max-width:768px){
 
-    transform:scale(.95);
+    section{
+
+        padding:70px 18px;
+
+    }
+
+    h1{
+
+        font-size:34px;
+
+    }
+
+    h2{
+
+        font-size:28px;
+
+    }
+
+    h3{
+
+        font-size:20px;
+
+    }
+
+    p{
+
+        font-size:16px;
+
+    }
+
+    .glass-card{
+
+        padding:28px;
+
+        border-radius:24px;
+
+    }
+
+    .story-navigation{
+
+        flex-direction:column;
+
+    }
+
+    .story-navigation button{
+
+        width:100%;
+
+    }
+
+    .gallery-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .gallery-item img{
+
+        height:260px;
+
+    }
+
+    #musicBtn{
+
+        width:58px;
+
+        height:58px;
+
+        right:18px;
+
+        bottom:18px;
+
+        font-size:22px;
+
+    }
+
+    #loveDays{
+
+        font-size:48px;
+
+    }
+
+    .timeline{
+
+        padding-left:28px;
+
+    }
+
+    .timeline-dot{
+
+        left:-24px;
+
+    }
+
+}
+
+@media (max-width:480px){
+
+    h1{
+
+        font-size:28px;
+
+    }
+
+    h2{
+
+        font-size:23px;
+
+    }
+
+    p{
+
+        font-size:15px;
+
+        line-height:1.8;
+
+    }
+
+    .welcome-badge{
+
+        font-size:14px;
+
+    }
+
+    .loading-heart{
+
+        font-size:56px;
+
+    }
+
+    .loading-content h1{
+
+        font-size:30px;
+
+    }
+
+    .gallery-item img{
+
+        height:220px;
+
+    }
+
+    #musicBtn{
+
+        width:52px;
+
+        height:52px;
+
+        font-size:20px;
+
+    }
+
+    .counter-icon{
+
+        width:80px;
+
+        height:80px;
+
+        font-size:35px;
+
+    }
+
+    #loveDays{
+
+        font-size:38px;
+
+    }
+
+    #closeLightbox{
+
+        top:15px;
+
+        right:20px;
+
+        font-size:34px;
+
+    }
+
+}
+
+/* =========================
+   DESKTOP LARGE
+========================= */
+
+@media (min-width:1600px){
+
+    .glass-card{
+
+        max-width:1100px;
+
+    }
+
+}
+
+/* =========================
+   FINAL
+========================= */
+
+body{
+
+    animation:pageFade .8s ease;
+
+}
+
+@keyframes pageFade{
+
+    from{
+
+        opacity:0;
+
+    }
+
+    to{
+
+        opacity:1;
+
+    }
 
 }
