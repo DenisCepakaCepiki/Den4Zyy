@@ -464,13 +464,17 @@ stories.forEach(item=>{
 
 document.addEventListener("keydown",(e)=>{
 
-    if(story.classList.contains("hidden")) return;
+    if(
+        story.classList.contains("hidden")
+    ) return;
+
 
     if(e.key === "ArrowRight"){
 
         nextButton.click();
 
     }
+
 
     if(e.key === "ArrowLeft"){
 
