@@ -1,0 +1,512 @@
+/* ==========================================
+   Happy Girlfriend Day Premium
+   Part 1
+   Reset • Theme • Aurora • Stars • Hearts
+   Loading • Glass Card
+========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    overflow-x:hidden;
+    background:#ffb7d5;
+    color:#fff;
+    min-height:100vh;
+    position:relative;
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:#ffd6e7;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#ff4f91;
+    border-radius:20px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background:#ff2f7a;
+}
+
+/* Hide */
+
+.hidden{
+    display:none !important;
+}
+
+/* ==========================================
+   Aurora Background
+========================================== */
+
+.aurora{
+    position:fixed;
+    inset:0;
+    overflow:hidden;
+    z-index:-3;
+    background:linear-gradient(
+        180deg,
+        #ffb7d5 0%,
+        #ffc8dd 40%,
+        #ffe5ec 100%
+    );
+}
+
+.aurora span{
+    position:absolute;
+    border-radius:50%;
+    filter:blur(120px);
+    opacity:.7;
+    animation:auroraMove 18s ease-in-out infinite alternate;
+}
+
+.aurora span:nth-child(1){
+    width:420px;
+    height:420px;
+    background:#ff5d8f;
+    top:-100px;
+    left:-100px;
+}
+
+.aurora span:nth-child(2){
+    width:500px;
+    height:500px;
+    background:#ff8fab;
+    bottom:-150px;
+    right:-120px;
+    animation-duration:22s;
+}
+
+.aurora span:nth-child(3){
+    width:350px;
+    height:350px;
+    background:#ffd6e7;
+    top:35%;
+    left:35%;
+    animation-duration:25s;
+}
+
+@keyframes auroraMove{
+
+    from{
+
+        transform:
+        translate(0,0)
+        scale(1);
+
+    }
+
+    to{
+
+        transform:
+        translate(120px,-80px)
+        scale(1.35);
+
+    }
+
+}
+
+/* ==========================================
+   Stars
+========================================== */
+
+#stars{
+    position:fixed;
+    inset:0;
+    z-index:-2;
+    pointer-events:none;
+}
+
+.star{
+
+    position:absolute;
+
+    width:2px;
+
+    height:2px;
+
+    background:white;
+
+    border-radius:50%;
+
+    animation:twinkle 3s infinite;
+
+}
+
+@keyframes twinkle{
+
+    0%{
+
+        opacity:.2;
+        transform:scale(.8);
+
+    }
+
+    50%{
+
+        opacity:1;
+        transform:scale(1.8);
+
+    }
+
+    100%{
+
+        opacity:.2;
+        transform:scale(.8);
+
+    }
+
+}
+
+/* ==========================================
+   Floating Hearts
+========================================== */
+
+#hearts{
+
+    position:fixed;
+
+    inset:0;
+
+    overflow:hidden;
+
+    pointer-events:none;
+
+    z-index:-1;
+
+}
+
+.heart{
+
+    position:absolute;
+
+    bottom:-40px;
+
+    font-size:20px;
+
+    opacity:.7;
+
+    animation:floatHeart linear forwards;
+
+}
+
+@keyframes floatHeart{
+
+    from{
+
+        transform:
+        translateY(0)
+        rotate(0deg);
+
+        opacity:0;
+
+    }
+
+    10%{
+
+        opacity:1;
+
+    }
+
+    to{
+
+        transform:
+        translateY(-120vh)
+        rotate(360deg);
+
+        opacity:0;
+
+    }
+
+}
+
+/* ==========================================
+   Loading Screen
+========================================== */
+
+#loading-screen{
+
+    position:fixed;
+
+    inset:0;
+
+    background:
+
+    linear-gradient(
+        180deg,
+        #ff5d8f,
+        #ffb7d5
+    );
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-direction:column;
+
+    z-index:99999;
+
+}
+
+.loader-heart{
+
+    font-size:70px;
+
+    animation:heartbeat 1.2s infinite;
+
+}
+
+#loading-screen h1{
+
+    margin-top:20px;
+
+    font-size:40px;
+
+    font-weight:700;
+
+    text-align:center;
+
+}
+
+#loading-screen p{
+
+    margin-top:15px;
+
+    opacity:.8;
+
+}
+
+@keyframes heartbeat{
+
+    0%{
+
+        transform:scale(1);
+
+    }
+
+    20%{
+
+        transform:scale(1.25);
+
+    }
+
+    40%{
+
+        transform:scale(.95);
+
+    }
+
+    60%{
+
+        transform:scale(1.3);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+    }
+
+}
+
+/* ==========================================
+   Main Container
+========================================== */
+
+#app{
+
+    width:100%;
+
+    min-height:100vh;
+
+    padding:40px 20px;
+
+}
+
+/* ==========================================
+   Section
+========================================== */
+
+section{
+
+    width:100%;
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-direction:column;
+
+}
+
+/* ==========================================
+   Glass Card
+========================================== */
+
+.glass-card{
+
+    width:min(900px,95%);
+
+    padding:45px;
+
+    border-radius:28px;
+
+    background:
+
+    rgba(255,255,255,.15);
+
+    border:
+
+    1px solid rgba(255,255,255,.35);
+
+    backdrop-filter:blur(25px);
+
+    -webkit-backdrop-filter:blur(25px);
+
+    box-shadow:
+
+    0 20px 60px rgba(0,0,0,.15);
+
+    transition:.4s;
+
+}
+
+.glass-card:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:
+
+    0 30px 80px rgba(0,0,0,.20);
+
+}
+
+/* ==========================================
+   Typography
+========================================== */
+
+h1{
+
+    font-size:52px;
+
+    font-weight:700;
+
+    line-height:1.2;
+
+}
+
+h2{
+
+    font-size:38px;
+
+    font-weight:700;
+
+}
+
+h4{
+
+    font-size:18px;
+
+    color:#fff;
+
+    margin-bottom:15px;
+
+}
+
+p{
+
+    font-size:18px;
+
+    line-height:1.8;
+
+    margin-top:20px;
+
+    color:#fff;
+
+}
+
+span{
+
+    color:#ff2f7a;
+
+}
+
+/* ==========================================
+   Buttons
+========================================== */
+
+button{
+
+    margin-top:30px;
+
+    border:none;
+
+    cursor:pointer;
+
+    padding:
+
+    16px 36px;
+
+    border-radius:50px;
+
+    background:
+
+    linear-gradient(
+        135deg,
+        #ff4f91,
+        #ff7eb3
+    );
+
+    color:white;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    transition:.35s;
+
+    box-shadow:
+
+    0 10px 25px rgba(255,79,145,.4);
+
+}
+
+button:hover{
+
+    transform:
+
+    translateY(-4px)
+    scale(1.04);
+
+    box-shadow:
+
+    0 20px 40px rgba(255,79,145,.55);
+
+}
+
+button:active{
+
+    transform:scale(.95);
+
+}
