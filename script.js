@@ -309,7 +309,6 @@ const storyPhoto = document.getElementById("storyPhoto");
 const typingText = document.getElementById("typingText");
 const storyNumber = document.getElementById("storyNumber");
 
-const prevButton = document.getElementById("prevButton");
 const nextButton = document.getElementById("nextButton");
 
 /* ===========================
@@ -367,8 +366,6 @@ function showStory(index){
 
     typeWriter(data.text);
 
-    prevButton.style.visibility =
-        index === 0 ? "hidden" : "visible";
 
     if(index === stories.length - 1){
 
@@ -428,23 +425,6 @@ nextButton.addEventListener("click",()=>{
    PREVIOUS STORY
 =========================== */
 
-prevButton.addEventListener("click",()=>{
-
-    if(currentStory === 0) return;
-
-    currentStory--;
-
-    showStory(currentStory);
-
-    window.scrollTo({
-
-        top:0,
-
-        behavior:"smooth"
-
-    });
-
-});
 
 /* ===========================
    IMAGE PRELOAD
@@ -1229,21 +1209,6 @@ function handleSwipe(){
         ){
 
             nextButton.click();
-
-        }
-
-    }
-
-
-
-    if(distance>0){
-
-
-        if(
-            !story.classList.contains("hidden")
-        ){
-
-            prevButton.click();
 
         }
 
