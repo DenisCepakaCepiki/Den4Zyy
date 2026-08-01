@@ -42,7 +42,7 @@ text:`Hai sayang...
 
 Selamat Hari Girlfriend.
 
-Terima kasih sudah menjadi bagian dari hidup Dimas.
+Terima kasih sudah menjadi bagian dari hidup aku.
 
 Semoga hari ini menjadi salah satu kenangan manis yang akan selalu kita ingat bersama.`
 
@@ -60,7 +60,7 @@ Terima kasih sudah mau mendengarkan.
 
 Terima kasih sudah hadir ketika dunia terasa berat.
 
-Kamu benar-benar berarti untuk Dimas.`
+Kamu benar-benar berarti untuk aku.`
 
 },
 
@@ -70,13 +70,13 @@ title:"Kamu Rumahku",
 
 image:"assets/images/3.jpg",
 
-text:`Di mana pun Dimas berada...
+text:`Di mana pun aku berada...
 
 Kalau ada kamu...
 
 Rasanya semuanya terasa lebih tenang.
 
-Kamu adalah rumah yang selalu ingin Dimas pulang.`
+Kamu adalah rumah yang selalu ingin aku pulang.`
 
 },
 
