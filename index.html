@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Happy Girlfriend Day ❤️</title>
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Aurora Background -->
+<div class="aurora">
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+
+<!-- Floating Hearts -->
+<div id="hearts"></div>
+
+<!-- Stars -->
+<div id="stars"></div>
+
+<!-- Loading Screen -->
+<div id="loading-screen">
+
+    <div class="loader-heart">
+        ❤️
+    </div>
+
+    <h1>Happy Girlfriend Day</h1>
+
+    <p>Loading Special Gift...</p>
+
+</div>
+
+<!-- MAIN -->
+<div id="app" class="hidden">
+
+    <!-- Welcome -->
+    <section id="welcome">
+
+        <div class="glass-card">
+
+            <h4>💖 Happy Girlfriend Day 💖</h4>
+
+            <h1>
+                Untuk<br>
+                <span>Naila Nazla Pohan</span>
+            </h1>
+
+            <p>
+                Hai Sayang...
+
+                Dimas punya hadiah kecil yang dibuat khusus
+                untuk kamu.
+
+                Semoga kamu suka ya ❤️
+            </p>
+
+            <button id="startBtn">
+                Buka Hadiah 🎁
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- Music -->
+    <audio
+        id="bgMusic"
+        loop
+    >
+        <source
+            src="assets/music/love.mp3"
+            type="audio/mpeg">
+    </audio>
+
+    <!-- Music Button -->
+    <button id="musicBtn">
+
+        🎵
+
+    </button>
+
+    <!-- Main Card -->
+    <section
+        id="story"
+        class="hidden">
+
+        <div class="glass-card">
+
+            <!-- Judul -->
+            <h2 id="title"></h2>
+
+            <!-- Foto -->
+            <div class="image-box">
+
+                <img
+                    id="storyImage"
+                    src=""
+                    alt="">
+
+            </div>
+
+            <!-- Surat -->
+            <div
+                id="typingText"
+                class="typing">
+            </div>
+
+            <!-- Navigation -->
+            <div class="navigation">
+
+                <button id="prevBtn">
+
+                    ← Sebelumnya
+
+                </button>
+
+                <button id="nextBtn">
+
+                    Selanjutnya →
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Gallery -->
+    <section
+        id="gallery"
+        class="hidden">
+
+        <h2>
+
+            📸 Galeri Kita
+
+        </h2>
+
+        <div class="gallery-grid">
+
+            <img src="assets/images/1.jpg">
+
+            <img src="assets/images/2.jpg">
+
+            <img src="assets/images/3.jpg">
+
+            <img src="assets/images/4.jpg">
+
+            <img src="assets/images/5.jpg">
+
+            <img src="assets/images/6.jpg">
+
+        </div>
+
+    </section>
+
+    <!-- Timeline -->
+    <section
+        id="timeline"
+        class="hidden">
+
+        <h2>
+
+            💞 Perjalanan Kita
+
+        </h2>
+
+        <div id="timelineContainer">
+
+        </div>
+
+    </section>
+
+    <!-- Countdown -->
+    <section
+        id="countdown"
+        class="hidden">
+
+        <div class="glass-card">
+
+            <h2>
+
+                ❤️ Bersama Selama ❤️
+
+            </h2>
+
+            <h1 id="loveCounter">
+
+                000 Hari
+
+            </h1>
+
+        </div>
+
+    </section>
+
+    <!-- Ending -->
+    <section
+        id="ending"
+        class="hidden">
+
+        <div class="glass-card">
+
+            <h1>
+
+                I Love You ❤️
+
+            </h1>
+
+            <p id="endingText">
+
+            </p>
+
+            <button id="restartBtn">
+
+                Lihat Lagi 💕
+
+            </button>
+
+        </div>
+
+    </section>
+
+</div>
+
+<!-- Lightbox -->
+<div
+    id="lightbox"
+    class="hidden">
+
+    <img
+        id="lightboxImg"
+        src="">
+
+</div>
+
+<!-- Confetti -->
+<canvas id="confetti"></canvas>
+
+<!-- JS -->
+<script src="script.js"></script>
+
+</body>
+</html>
