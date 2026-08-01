@@ -36,7 +36,7 @@ const stories = [
 
 title:"Happy Girlfriend Day ❤️",
 
-image:"assets/images/1.jpg",
+image:"1.jpg",
 
 text:`Hai sayang...
 
@@ -52,7 +52,7 @@ Semoga hari ini menjadi salah satu kenangan manis yang akan selalu kita ingat be
 
 title:"Terima Kasih ❤️",
 
-image:"assets/images/2.jpg",
+image:"2.jpg",
 
 text:`Terima kasih sudah bertahan.
 
@@ -68,7 +68,7 @@ Kamu benar-benar berarti untuk aku.`
 
 title:"Kamu Rumahku",
 
-image:"assets/images/3.jpg",
+image:"3.jpg",
 
 text:`Di mana pun aku berada...
 
@@ -84,7 +84,7 @@ Kamu adalah rumah yang selalu ingin aku pulang.`
 
 title:"Selamanya",
 
-image:"assets/images/4.jpg",
+image:"4.jpg",
 
 text:`Semoga kita terus berjalan bersama.
 
