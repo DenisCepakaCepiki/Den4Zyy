@@ -18,7 +18,7 @@ html{
 
 body{
     font-family:'Poppins',sans-serif;
-    background:#ffd7e8;
+    background:#ff8cbd;
     color:#ffffff;
     overflow-x:hidden;
     min-height:100vh;
@@ -149,7 +149,7 @@ body::before{
 
     height:480px;
 
-    background:#ff9bc5;
+    background:#ff8cbd;
 
     right:-100px;
 
